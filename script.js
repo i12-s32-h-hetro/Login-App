@@ -1,12 +1,14 @@
-function login() {
+ffunction login() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
+  const resultElement = document.getElementById('loginResult');
 
-  // Dummy validation (for test purposes)
   if (username === 'admin' && password === 'password') {
-    document.getElementById('loginResult').textContent = 'Login successful!';
+    resultElement.textContent = 'Login successful!';
+    resultElement.style.color = 'green';
   } else {
-    document.getElementById('loginResult').textContent = 'Invalid credentials';
+    resultElement.textContent = 'Login failed!';
+    resultElement.style.color = 'red';
   }
 
   return false; // Prevent form submission
